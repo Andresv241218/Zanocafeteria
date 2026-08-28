@@ -3153,6 +3153,194 @@
 
 }
 
+
+@media (max-width: 768px) {
+
+    /* -----------------------------------------
+       CONTENEDOR
+    ----------------------------------------- */
+
+    .ubicacion-content {
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        position: relative !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        gap: 25px !important;
+
+    }
+
+
+    /* -----------------------------------------
+       INFORMACIÓN
+    ----------------------------------------- */
+
+    .ubicacion-info {
+
+        position: relative !important;
+
+        top: auto !important;
+
+        right: auto !important;
+
+        bottom: auto !important;
+
+        left: auto !important;
+
+        order: 1 !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        margin: 0 !important;
+
+        transform: none !important;
+
+        float: none !important;
+
+        box-sizing: border-box !important;
+
+        z-index: 2 !important;
+
+    }
+
+
+    /* -----------------------------------------
+       MAPA
+    ----------------------------------------- */
+
+    .ubicacion-map {
+
+        position: relative !important;
+
+        top: auto !important;
+
+        right: auto !important;
+
+        bottom: auto !important;
+
+        left: auto !important;
+
+        order: 2 !important;
+
+        width: 100% !important;
+
+        height: 400px !important;
+
+        min-height: 400px !important;
+
+        max-height: none !important;
+
+        margin: 0 !important;
+
+        transform: none !important;
+
+        float: none !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        z-index: 1 !important;
+
+    }
+
+
+    /* -----------------------------------------
+       IFRAME
+    ----------------------------------------- */
+
+    .ubicacion-map iframe {
+
+        position: static !important;
+
+        display: block !important;
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        min-height: 0 !important;
+
+        max-height: none !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        border: 0 !important;
+
+        transform: none !important;
+
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL
+   600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    .ubicacion-map {
+
+        height: 330px !important;
+
+        min-height: 330px !important;
+
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+   480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    .ubicacion-map {
+
+        height: 300px !important;
+
+        min-height: 300px !important;
+
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL MUY PEQUEÑO
+   380px
+========================================= */
+
+@media (max-width: 380px) {
+
+    .ubicacion-map {
+
+        height: 280px !important;
+
+        min-height: 280px !important;
+
+    }
+
+}
+
 /* =========================================
    RESPONSIVE - FOOTER ZANO
 ========================================= */
@@ -3545,197 +3733,6 @@
 
     .footer-legal button {
         font-size: 0.63rem;
-    }
-
-}
-/*-------------------*/
-/* =========================================
-   CORRECCIÓN FINAL - MAPA EN MÓVIL
-========================================= */
-
-@media (max-width: 768px) {
-
-    /* -----------------------------------------
-       CONTENEDOR
-    ----------------------------------------- */
-
-    .ubicacion-content {
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        position: relative !important;
-
-        width: 100% !important;
-
-        height: auto !important;
-
-        min-height: 0 !important;
-
-        gap: 25px !important;
-
-    }
-
-
-    /* -----------------------------------------
-       INFORMACIÓN
-    ----------------------------------------- */
-
-    .ubicacion-info {
-
-        position: relative !important;
-
-        top: auto !important;
-
-        right: auto !important;
-
-        bottom: auto !important;
-
-        left: auto !important;
-
-        order: 1 !important;
-
-        width: 100% !important;
-
-        height: auto !important;
-
-        min-height: 0 !important;
-
-        margin: 0 !important;
-
-        transform: none !important;
-
-        float: none !important;
-
-        box-sizing: border-box !important;
-
-        z-index: 2 !important;
-
-    }
-
-
-    /* -----------------------------------------
-       MAPA
-    ----------------------------------------- */
-
-    .ubicacion-map {
-
-        position: relative !important;
-
-        top: auto !important;
-
-        right: auto !important;
-
-        bottom: auto !important;
-
-        left: auto !important;
-
-        order: 2 !important;
-
-        width: 100% !important;
-
-        height: 400px !important;
-
-        min-height: 400px !important;
-
-        max-height: none !important;
-
-        margin: 0 !important;
-
-        transform: none !important;
-
-        float: none !important;
-
-        box-sizing: border-box !important;
-
-        overflow: hidden !important;
-
-        z-index: 1 !important;
-
-    }
-
-
-    /* -----------------------------------------
-       IFRAME
-    ----------------------------------------- */
-
-    .ubicacion-map iframe {
-
-        position: static !important;
-
-        display: block !important;
-
-        width: 100% !important;
-
-        height: 100% !important;
-
-        min-height: 0 !important;
-
-        max-height: none !important;
-
-        margin: 0 !important;
-
-        padding: 0 !important;
-
-        border: 0 !important;
-
-        transform: none !important;
-
-    }
-
-}
-
-
-/* =========================================
-   MÓVIL
-   600px
-========================================= */
-
-@media (max-width: 600px) {
-
-    .ubicacion-map {
-
-        height: 330px !important;
-
-        min-height: 330px !important;
-
-    }
-
-}
-
-
-/* =========================================
-   MÓVIL PEQUEÑO
-   480px
-========================================= */
-
-@media (max-width: 480px) {
-
-    .ubicacion-map {
-
-        height: 300px !important;
-
-        min-height: 300px !important;
-
-    }
-
-}
-
-
-/* =========================================
-   MÓVIL MUY PEQUEÑO
-   380px
-========================================= */
-
-@media (max-width: 380px) {
-
-    .ubicacion-map {
-
-        height: 280px !important;
-
-        min-height: 280px !important;
-
     }
 
 }
