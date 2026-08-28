@@ -1,0 +1,151 @@
+/* =========================================
+   ZANO - VARIABLES GLOBALES
+========================================= */
+
+:root {
+
+    /* =====================================
+       PALETA DE COLORES
+    ===================================== */
+
+    --color-primary: #3B2520;
+    --color-primary-dark: #211815;
+
+    --color-secondary: #F5EFE6;
+    --color-background: #E8DED2;
+
+    --color-accent: #B8AAA0;
+
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+
+    /* =====================================
+       COLORES DE TEXTO
+    ===================================== */
+
+    --color-text: #211815;
+    --color-text-light: #6B5B54;
+    --color-text-white: #FFFFFF;
+
+
+    /* =====================================
+       ESTADOS
+    ===================================== */
+
+    --color-success: #4F6F52;
+    --color-error: #A94442;
+    --color-warning: #B8860B;
+
+
+    /* =====================================
+       BORDES
+    ===================================== */
+
+    --border-color: #D8CDC3;
+    --border-radius-sm: 6px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 30px;
+
+
+    /* =====================================
+       SOMBRAS
+    ===================================== */
+
+    --shadow-sm: 0 2px 8px rgba(33, 24, 21, 0.08);
+
+    --shadow-md: 0 5px 20px rgba(33, 24, 21, 0.12);
+
+    --shadow-lg: 0 10px 35px rgba(33, 24, 21, 0.16);
+
+
+    /* =====================================
+       TRANSICIONES
+    ===================================== */
+
+    --transition-fast: 0.2s ease;
+
+    --transition-normal: 0.3s ease;
+
+    --transition-slow: 0.5s ease;
+
+
+    /* =====================================
+       CONTENEDOR
+    ===================================== */
+
+    --container-width: 1200px;
+
+    --container-padding: 5%;
+
+
+    /* =====================================
+       Z-INDEX
+    ===================================== */
+
+    --z-header: 1000;
+    --z-overlay: 1100;
+    --z-modal: 1200;
+    --z-menu: 1300;
+
+}
+
+
+/* =========================================
+   RESET BÁSICO
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--color-secondary);
+
+    color: var(--color-text);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}

@@ -1,0 +1,256 @@
+/* =========================================
+   MODAL LEGAL - ZANO
+========================================= */
+
+.legal-modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    z-index: var(--z-modal);
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal);
+}
+
+.legal-modal.active {
+    visibility: visible;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.legal-modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background-color:
+        rgba(33, 24, 21, 0.78);
+
+    backdrop-filter: blur(7px);
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.legal-modal-container {
+    position: relative;
+
+    width: min(760px, 94vw);
+
+    max-height: 85vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background-color: var(--color-secondary);
+
+    border-radius: var(--border-radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+    z-index: 1;
+
+    transform:
+        translateY(25px)
+        scale(0.97);
+
+    transition:
+        transform var(--transition-normal);
+}
+
+.legal-modal.active
+.legal-modal-container {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.legal-modal-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 28px 32px 24px;
+
+    border-bottom:
+        1px solid var(--border-color);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+
+.legal-modal-subtitle {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--color-accent);
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.legal-modal-header h2 {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+
+    line-height: 1.15;
+}
+
+
+/* =========================================
+   BOTÓN CERRAR
+========================================= */
+
+.legal-modal-close {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: var(--color-background);
+
+    color: var(--color-primary);
+
+    font-size: 1.6rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.legal-modal-close:hover {
+    background-color: var(--color-primary);
+
+    color: var(--color-secondary);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.legal-modal-content {
+    padding: 30px 32px 35px;
+
+    overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        var(--color-primary)
+        transparent;
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.legal-content {
+    display: none;
+}
+
+.legal-content.active {
+    display: block;
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.legal-content h3 {
+    margin-bottom: 18px;
+
+    color: var(--color-text);
+
+    font-size: 1.25rem;
+}
+
+.legal-content h4 {
+    margin: 24px 0 8px;
+
+    color: var(--color-text);
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================
+   PÁRRAFOS
+========================================= */
+
+.legal-content p {
+    margin-bottom: 15px;
+
+    color: var(--color-text-light);
+
+    font-size: 0.88rem;
+
+    line-height: 1.75;
+}

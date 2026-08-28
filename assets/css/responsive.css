@@ -1,0 +1,3306 @@
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar-right {
+        gap: 22px;
+    }
+
+    .navbar-links {
+        gap: 20px;
+    }
+
+    .navbar-links a {
+        font-size: 0.9rem;
+    }
+
+    .navbar-button {
+        padding: 0 17px;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        height: 75px;
+
+        padding: 0 5%;
+    }
+
+    .navbar.scrolled {
+        height: 68px;
+    }
+
+    .navbar-logo img,
+    .navbar.scrolled .navbar-logo img {
+        width: 125px;
+    }
+
+
+    /* CONTENIDO DERECHO */
+
+    .navbar-right {
+        gap: 0;
+    }
+
+
+    /* MENÚ MÓVIL */
+
+    .navbar-links {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: min(82%, 350px);
+        height: 100vh;
+
+        padding: 110px 35px 40px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+
+        background-color: var(--color-secondary);
+
+        box-shadow: var(--shadow-lg);
+
+        transition: right var(--transition-slow);
+
+        z-index: var(--z-menu);
+    }
+
+    .navbar-links.active {
+        right: 0;
+    }
+
+
+    /* ENLACES MÓVILES */
+
+    .navbar-links a {
+        width: 100%;
+
+        font-size: 1.05rem;
+
+        padding: 10px 0;
+    }
+
+
+    /* OCULTAR BOTÓN DESKTOP */
+
+    .navbar-button {
+        display: none;
+    }
+
+
+    /* MOSTRAR HAMBURGUESA */
+
+    .navbar-toggle {
+        display: block;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+========================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar-logo img,
+    .navbar.scrolled .navbar-logo img {
+        width: 110px;
+    }
+
+    .navbar-links {
+        width: 88%;
+
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+}
+
+
+/* =========================================
+   PROPUESTA - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .propuesta {
+        padding: 90px 0;
+    }
+
+    .propuesta-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .propuesta-image {
+        height: 500px;
+    }
+
+    .propuesta-content {
+        max-width: 700px;
+    }
+
+}
+
+
+/* =========================================
+   PROPUESTA - MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .propuesta {
+        padding: 75px 0;
+    }
+
+    .propuesta-container {
+        width: 88%;
+
+        gap: 40px;
+    }
+
+    .propuesta-image {
+        height: 400px;
+
+        border-radius: var(--border-radius-md);
+    }
+
+    .propuesta-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .propuesta-content > p {
+        font-size: 0.95rem;
+    }
+
+}
+
+/* =========================================
+   CARTA - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .carta {
+        padding: 90px 0;
+    }
+
+    .carta-categorias {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .carta-card:last-child {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* =========================================
+   CARTA - MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .carta {
+        padding: 75px 0;
+    }
+
+    .carta-container {
+        width: 88%;
+    }
+
+    .carta-header {
+        margin-bottom: 40px;
+    }
+
+    .carta-header h2 {
+        font-size: 2.7rem;
+    }
+
+    .carta-header p {
+        font-size: 0.95rem;
+    }
+
+    .carta-categorias {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .carta-card:last-child {
+        grid-column: auto;
+    }
+
+    .carta-card-image {
+        height: 280px;
+    }
+
+    .carta-card-content {
+        padding: 24px;
+    }
+
+}
+
+
+/* =========================================
+   CARTA - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .carta {
+        padding: 90px 0;
+    }
+
+    .carta-categorias {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .carta-card:last-child {
+        grid-column: span 2;
+    }
+
+    .carta-card-image {
+        height: 300px;
+    }
+
+}
+
+
+/* =========================================
+   CARTA - MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .carta {
+        padding: 75px 0;
+    }
+
+    .carta-container {
+        width: 88%;
+    }
+
+    .carta-header {
+        margin-bottom: 40px;
+    }
+
+    .carta-header h2 {
+        font-size: 2.7rem;
+    }
+
+    .carta-header p {
+        font-size: 0.95rem;
+    }
+
+    .carta-categorias {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .carta-card:last-child {
+        grid-column: auto;
+    }
+
+    .carta-card-image {
+        height: 280px;
+    }
+
+    .carta-card-content {
+        padding: 24px;
+    }
+
+    /*
+       En móvil dejamos visibles
+       las flechas del carrusel.
+    */
+
+    .carta-slider-button {
+        opacity: 1;
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 1.3rem;
+    }
+
+}
+
+/* =========================================
+   MODAL CARTA - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .carta-modal {
+        padding: 20px;
+    }
+
+    .carta-modal-container {
+        width: min(95vw, 850px);
+
+        max-height: 94vh;
+    }
+
+    .carta-modal-header {
+        padding: 20px 24px;
+    }
+
+    .carta-modal-content {
+        padding: 20px 65px;
+    }
+
+    .carta-modal-image-wrapper img {
+        max-width: 100%;
+        max-height: 65vh;
+    }
+
+    .carta-modal-arrow {
+        width: 44px;
+        height: 44px;
+
+        font-size: 1.8rem;
+    }
+
+    .carta-modal-prev {
+        left: 14px;
+    }
+
+    .carta-modal-next {
+        right: 14px;
+    }
+
+}
+
+
+/* =========================================
+   MODAL CARTA - MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .carta-modal {
+        padding: 8px;
+    }
+
+    .carta-modal-container {
+        width: 100%;
+        height: 96vh;
+
+        max-height: 96vh;
+
+        border-radius: var(--border-radius-md);
+    }
+
+
+    /* -------------------------------------
+       HEADER
+    ------------------------------------- */
+
+    .carta-modal-header {
+        min-height: 70px;
+
+        padding: 15px 18px;
+    }
+
+    .carta-modal-subtitle {
+        font-size: 0.6rem;
+
+        letter-spacing: 1.5px;
+    }
+
+    .carta-modal-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .carta-modal-close {
+        width: 38px;
+        height: 38px;
+
+        font-size: 1.6rem;
+    }
+
+
+    /* -------------------------------------
+       CONTENIDO
+    ------------------------------------- */
+
+    .carta-modal-content {
+        min-height: 0;
+
+        padding: 15px 45px;
+    }
+
+    .carta-modal-image-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carta-modal-image-wrapper img {
+        width: auto;
+        height: auto;
+
+        max-width: 100%;
+        max-height: 72vh;
+
+        object-fit: contain;
+    }
+
+
+    /* -------------------------------------
+       FLECHAS
+    ------------------------------------- */
+
+    .carta-modal-arrow {
+        width: 36px;
+        height: 36px;
+
+        font-size: 1.5rem;
+    }
+
+    .carta-modal-prev {
+        left: 7px;
+    }
+
+    .carta-modal-next {
+        right: 7px;
+    }
+
+
+    /* -------------------------------------
+       FOOTER
+    ------------------------------------- */
+
+    .carta-modal-footer {
+        min-height: 50px;
+
+        padding: 10px 18px;
+
+        gap: 12px;
+    }
+
+    .carta-modal-counter {
+        font-size: 0.7rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+========================================= */
+
+@media (max-width: 380px) {
+
+    .carta-modal {
+        padding: 5px;
+    }
+
+    .carta-modal-container {
+        height: 97vh;
+
+        max-height: 97vh;
+
+        border-radius: var(--border-radius-sm);
+    }
+
+
+    /* -------------------------------------
+       HEADER
+    ------------------------------------- */
+
+    .carta-modal-header {
+        min-height: 62px;
+
+        padding: 12px 15px;
+    }
+
+    .carta-modal-header h2 {
+        font-size: 1.05rem;
+    }
+
+    .carta-modal-close {
+        width: 34px;
+        height: 34px;
+
+        font-size: 1.4rem;
+    }
+
+
+    /* -------------------------------------
+       CONTENIDO
+    ------------------------------------- */
+
+    .carta-modal-content {
+        padding: 10px 40px;
+    }
+
+    .carta-modal-image-wrapper img {
+        max-width: 100%;
+        max-height: 74vh;
+    }
+
+
+    /* -------------------------------------
+       FLECHAS
+    ------------------------------------- */
+
+    .carta-modal-arrow {
+        width: 32px;
+        height: 32px;
+
+        font-size: 1.3rem;
+    }
+
+    .carta-modal-prev {
+        left: 5px;
+    }
+
+    .carta-modal-next {
+        right: 5px;
+    }
+
+
+    /* -------------------------------------
+       FOOTER
+    ------------------------------------- */
+
+    .carta-modal-footer {
+        min-height: 45px;
+
+        padding: 8px 15px;
+    }
+
+}
+
+/* =========================================
+   ZOOM CARTA - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .carta-zoom-controls {
+        top: 12px;
+        right: 14px;
+    }
+
+    .carta-zoom-controls button {
+        min-width: 36px;
+        height: 36px;
+    }
+
+}
+
+
+/* =========================================
+   ZOOM CARTA - MÓVIL
+========================================= */
+
+@media (max-width: 600px) {
+
+    .carta-zoom-controls {
+        top: 10px;
+        right: 10px;
+
+        gap: 3px;
+
+        padding: 4px;
+    }
+
+    .carta-zoom-controls button {
+        min-width: 34px;
+        height: 34px;
+
+        font-size: 1rem;
+    }
+
+    #carta-zoom-reset {
+        min-width: 50px;
+
+        font-size: 0.65rem;
+    }
+
+}
+
+
+/* =========================================
+   ZOOM CARTA - MÓVIL PEQUEÑO
+========================================= */
+
+@media (max-width: 380px) {
+
+    .carta-zoom-controls {
+        top: 8px;
+        right: 8px;
+    }
+
+    .carta-zoom-controls button {
+        min-width: 32px;
+        height: 32px;
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE - TORTAS ZANO
+========================================= */
+
+
+/* =========================================
+   TABLET GRANDE
+   1100px
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .tortas {
+        padding: 100px 0;
+    }
+
+    .tortas-container {
+        width: 92%;
+    }
+
+    .tortas-categories {
+        gap: 22px;
+    }
+
+
+    /* -----------------------------------------
+       MODAL
+    ----------------------------------------- */
+
+    .tortas-modal {
+        padding: 25px;
+    }
+
+    .tortas-modal-container {
+        width: min(1000px, 94vw);
+
+        max-height: 90vh;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCTOS
+       4 → 3
+    ----------------------------------------- */
+
+    .tortas-modal-products {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 20px;
+
+        padding: 25px 30px 30px;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO PRODUCTO
+    ----------------------------------------- */
+
+    .tortas-product-content {
+        padding: 18px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   900px
+========================================= */
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------
+       SECCIÓN TORTAS
+    ----------------------------------------- */
+
+    .tortas {
+        padding: 90px 0;
+    }
+
+    .tortas-container {
+        width: 92%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .tortas-header {
+        margin-bottom: 45px;
+    }
+
+    .tortas-header h2 {
+        font-size: clamp(
+            2.4rem,
+            6vw,
+            3.8rem
+        );
+    }
+
+
+    /* -----------------------------------------
+       CATEGORÍAS
+    ----------------------------------------- */
+
+    .tortas-categories {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+    .torta-category-card {
+        min-height: 390px;
+    }
+
+    .torta-category-content {
+        padding: 28px;
+    }
+
+
+    /* -----------------------------------------
+       MODAL
+    ----------------------------------------- */
+
+    .tortas-modal {
+        padding: 20px;
+    }
+
+    .tortas-modal-container {
+        width: 95vw;
+
+        max-height: 92vh;
+    }
+
+
+    /* -----------------------------------------
+       HEADER MODAL
+    ----------------------------------------- */
+
+    .tortas-modal-header {
+        padding: 25px 28px 22px;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCTOS
+       3 CARDS
+    ----------------------------------------- */
+
+    .tortas-modal-products {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 18px;
+
+        padding: 22px 28px 28px;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCTO
+    ----------------------------------------- */
+
+    .tortas-product-content {
+        padding: 17px;
+    }
+
+    .tortas-product-content h3 {
+        min-height: auto;
+
+        font-size: 1.05rem;
+    }
+
+    .tortas-product-description {
+        font-size: 0.76rem;
+    }
+
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+   768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* -----------------------------------------
+       SECCIÓN TORTAS
+    ----------------------------------------- */
+
+    .tortas {
+        padding: 90px 0;
+    }
+
+    .tortas-container {
+        width: 92%;
+    }
+
+
+    /* -----------------------------------------
+       CATEGORÍAS
+    ----------------------------------------- */
+
+    .tortas-categories {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .torta-category-card {
+        min-height: 350px;
+    }
+
+    .torta-category-content {
+        padding: 24px;
+    }
+
+
+    /* -----------------------------------------
+       MODAL
+    ----------------------------------------- */
+
+    .tortas-modal {
+        padding: 15px;
+    }
+
+    .tortas-modal-container {
+        width: 96vw;
+
+        max-height: 94vh;
+
+        border-radius:
+            var(--border-radius-md);
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .tortas-modal-header {
+        padding: 22px 24px 20px;
+    }
+
+    .tortas-modal-header h2 {
+        font-size: 2rem;
+    }
+
+    .tortas-modal-close {
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCTOS
+       3 → 2
+    ----------------------------------------- */
+
+    .tortas-modal-products {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+
+        padding: 20px 24px 24px;
+    }
+
+
+    /* -----------------------------------------
+       IMAGEN
+    ----------------------------------------- */
+
+    .tortas-product-image {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .tortas-product-content {
+        padding: 17px;
+    }
+
+    .tortas-product-content h3 {
+        font-size: 1rem;
+    }
+
+    .tortas-product-description {
+        font-size: 0.74rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------
+       PARTE INFERIOR
+    ----------------------------------------- */
+
+    .tortas-product-footer {
+        gap: 8px;
+
+        padding-top: 13px;
+    }
+
+    .tortas-product-price {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL
+   600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------
+       SECCIÓN
+    ----------------------------------------- */
+
+    .tortas {
+        padding: 80px 0;
+    }
+
+    .tortas-container {
+        width: 92%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .tortas-header {
+        margin-bottom: 35px;
+    }
+
+    .tortas-header h2 {
+        font-size: 2.5rem;
+
+        line-height: 1.05;
+    }
+
+    .tortas-header p {
+        font-size: 0.88rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* -----------------------------------------
+       CATEGORÍAS
+    ----------------------------------------- */
+
+    .tortas-categories {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .torta-category-card {
+        min-height: 360px;
+    }
+
+
+    /* -----------------------------------------
+       MODAL
+    ----------------------------------------- */
+
+    .tortas-modal {
+        padding: 10px;
+    }
+
+    .tortas-modal-container {
+        width: 100%;
+
+        max-width: none;
+
+        max-height: 95vh;
+
+        border-radius:
+            var(--border-radius-md);
+    }
+
+
+    /* -----------------------------------------
+       HEADER MODAL
+    ----------------------------------------- */
+
+    .tortas-modal-header {
+        padding: 20px;
+    }
+
+    .tortas-modal-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .tortas-modal-subtitle {
+        font-size: 0.6rem;
+    }
+
+    .tortas-modal-close {
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 1.5rem;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCTOS
+       2 → 1
+    ----------------------------------------- */
+
+    .tortas-modal-products {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 18px 20px 20px;
+    }
+
+
+    /* -----------------------------------------
+       CARD PRODUCTO
+    ----------------------------------------- */
+
+    .tortas-product-card {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------
+       IMAGEN
+    ----------------------------------------- */
+
+    .tortas-product-image {
+        aspect-ratio: 16 / 10;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .tortas-product-content {
+        padding: 18px;
+    }
+
+    .tortas-product-content h3 {
+        min-height: auto;
+
+        font-size: 1.05rem;
+    }
+
+    .tortas-product-description {
+        font-size: 0.78rem;
+    }
+
+
+    /* -----------------------------------------
+       PARTE INFERIOR
+    ----------------------------------------- */
+
+    .tortas-product-footer {
+        padding-top: 15px;
+    }
+
+    .tortas-product-price {
+        font-size: 0.82rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+   480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    .tortas {
+        padding: 70px 0;
+    }
+
+    .tortas-container {
+        width: 94%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .tortas-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .tortas-header p {
+        font-size: 0.83rem;
+    }
+
+
+    /* -----------------------------------------
+       MODAL
+    ----------------------------------------- */
+
+    .tortas-modal {
+        padding: 8px;
+    }
+
+    .tortas-modal-container {
+        max-height: 96vh;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .tortas-modal-header {
+        padding: 18px;
+    }
+
+    .tortas-modal-header h2 {
+        font-size: 1.6rem;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCTOS
+    ----------------------------------------- */
+
+    .tortas-modal-products {
+        gap: 14px;
+
+        padding: 16px 17px 18px;
+    }
+
+
+    /* -----------------------------------------
+       CARD
+    ----------------------------------------- */
+
+    .tortas-product-content {
+        padding: 16px;
+    }
+
+    .tortas-product-content h3 {
+        font-size: 1rem;
+    }
+
+    .tortas-product-description {
+        font-size: 0.75rem;
+
+        line-height: 1.55;
+    }
+
+    .tortas-product-price {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL MUY PEQUEÑO
+   380px
+========================================= */
+
+@media (max-width: 380px) {
+
+    .tortas {
+        padding: 65px 0;
+    }
+
+    .tortas-container {
+        width: 95%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .tortas-header h2 {
+        font-size: 2rem;
+    }
+
+    .tortas-header p {
+        font-size: 0.8rem;
+    }
+
+
+    /* -----------------------------------------
+       MODAL
+    ----------------------------------------- */
+
+    .tortas-modal {
+        padding: 5px;
+    }
+
+    .tortas-modal-container {
+        max-height: 97vh;
+
+        border-radius: 12px;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .tortas-modal-header {
+        padding: 16px 14px;
+    }
+
+    .tortas-modal-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .tortas-modal-subtitle {
+        font-size: 0.52rem;
+
+        letter-spacing: 1.1px;
+    }
+
+    .tortas-modal-close {
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 1.15rem;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCTOS
+    ----------------------------------------- */
+
+    .tortas-modal-products {
+        gap: 12px;
+
+        padding: 14px 14px 16px;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .tortas-product-content {
+        padding: 14px;
+    }
+
+    .tortas-product-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .tortas-product-description {
+        font-size: 0.72rem;
+
+        line-height: 1.5;
+    }
+
+    .tortas-product-price {
+        font-size: 0.78rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL HORIZONTAL
+========================================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+    .tortas-modal {
+        padding: 8px 15px;
+    }
+
+    .tortas-modal-container {
+        max-height: 96vh;
+    }
+
+    .tortas-modal-header {
+        padding: 16px 22px;
+    }
+
+    .tortas-modal-products {
+        padding: 16px 22px 20px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE FORMULARIO
+========================================= */
+
+
+/* =========================================
+   TABLET GRANDE
+   1100px
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .pedido-container {
+        width: min(90%, 850px);
+    }
+
+    .pedido-form {
+        padding: 35px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   900px
+========================================= */
+
+@media (max-width: 900px) {
+
+    .pedido {
+        padding: 100px 0;
+    }
+
+    .pedido-container {
+        width: min(90%, 760px);
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .pedido-header {
+        max-width: 620px;
+
+        margin-bottom: 45px;
+    }
+
+    .pedido-header h2 {
+        font-size: clamp(2.4rem, 6vw, 3.5rem);
+    }
+
+
+    /* -----------------------------------------
+       FORMULARIO
+    ----------------------------------------- */
+
+    .pedido-form {
+        width: 100%;
+
+        padding: 32px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 22px;
+    }
+
+
+    /* -----------------------------------------
+       CAMPOS COMPLETOS
+    ----------------------------------------- */
+
+    .form-group-full {
+        grid-column: 1 / -1;
+    }
+
+    .form-terms {
+        grid-column: 1 / -1;
+    }
+
+    .pedido-submit {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+   768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    .pedido {
+        padding: 90px 0;
+    }
+
+    .pedido-container {
+        width: 92%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .pedido-header {
+        margin-bottom: 40px;
+    }
+
+    .pedido-header h2 {
+        font-size: clamp(2.3rem, 8vw, 3.2rem);
+
+        letter-spacing: -1px;
+    }
+
+    .pedido-header p {
+        font-size: 0.92rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* -----------------------------------------
+       FORMULARIO
+    ----------------------------------------- */
+
+    .pedido-form {
+        grid-template-columns: 1fr;
+
+        padding: 30px 26px;
+
+        gap: 20px;
+    }
+
+
+    .form-group,
+    .form-group-full,
+    .form-terms,
+    .pedido-submit {
+        grid-column: 1 / -1;
+    }
+
+
+    /* -----------------------------------------
+       INPUTS
+    ----------------------------------------- */
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.88rem;
+    }
+
+    .form-group input {
+        min-height: 48px;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+
+    /* -----------------------------------------
+       TÉRMINOS
+    ----------------------------------------- */
+
+    .form-checkbox {
+        align-items: flex-start;
+
+        gap: 9px;
+    }
+
+    .form-checkbox input {
+        margin-top: 3px;
+
+        width: 18px;
+        height: 18px;
+    }
+
+    .form-checkbox span {
+        font-size: 0.75rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------
+       BOTÓN
+    ----------------------------------------- */
+
+    .pedido-submit {
+        min-height: 52px;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL
+   600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    .pedido {
+        padding: 80px 0;
+    }
+
+    .pedido-container {
+        width: 92%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .pedido-header {
+        max-width: 100%;
+
+        margin-bottom: 35px;
+    }
+
+    .pedido-header h2 {
+        font-size: 2.5rem;
+
+        line-height: 1.05;
+    }
+
+    .pedido-header p {
+        font-size: 0.88rem;
+    }
+
+
+    /* -----------------------------------------
+       FORMULARIO
+    ----------------------------------------- */
+
+    .pedido-form {
+        padding: 26px 20px;
+
+        gap: 18px;
+
+        border-radius: var(--border-radius-md);
+    }
+
+
+    /* -----------------------------------------
+       LABELS
+    ----------------------------------------- */
+
+    .form-group label {
+        font-size: 0.75rem;
+    }
+
+
+    /* -----------------------------------------
+       INPUTS
+    ----------------------------------------- */
+
+    .form-group input,
+    .form-group textarea {
+        padding: 13px 14px;
+
+        font-size: 0.85rem;
+
+        border-radius: var(--border-radius-md);
+    }
+
+    .form-group input {
+        min-height: 46px;
+    }
+
+    .form-group textarea {
+        min-height: 115px;
+    }
+
+
+    /* -----------------------------------------
+       PRODUCTO / PRECIO
+    ----------------------------------------- */
+
+    #pedido-producto,
+    #pedido-precio {
+        font-size: 0.84rem;
+    }
+
+
+    /* -----------------------------------------
+       TÉRMINOS
+    ----------------------------------------- */
+
+    .form-checkbox {
+        gap: 8px;
+    }
+
+    .form-checkbox input {
+        width: 17px;
+        height: 17px;
+
+        flex-shrink: 0;
+    }
+
+    .form-checkbox span {
+        font-size: 0.70rem;
+
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------------------
+       BOTÓN
+    ----------------------------------------- */
+
+    .pedido-submit {
+        min-height: 50px;
+
+        font-size: 0.84rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+   480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    .pedido {
+        padding: 70px 0;
+    }
+
+    .pedido-container {
+        width: 94%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .pedido-header h2 {
+        font-size: 2.25rem;
+    }
+
+    .pedido-header p {
+        font-size: 0.84rem;
+
+        line-height: 1.65;
+    }
+
+
+    /* -----------------------------------------
+       FORMULARIO
+    ----------------------------------------- */
+
+    .pedido-form {
+        padding: 23px 17px;
+
+        gap: 17px;
+    }
+
+
+    /* -----------------------------------------
+       INPUTS
+    ----------------------------------------- */
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 13px;
+    }
+
+    .form-group input {
+        min-height: 45px;
+    }
+
+    .form-group textarea {
+        min-height: 105px;
+    }
+
+
+    /* -----------------------------------------
+       TÉRMINOS
+    ----------------------------------------- */
+
+    .form-checkbox span {
+        font-size: 0.68rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL MUY PEQUEÑO
+   380px
+========================================= */
+
+@media (max-width: 380px) {
+
+    .pedido-container {
+        width: 95%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .pedido-header h2 {
+        font-size: 2.05rem;
+    }
+
+    .pedido-header p {
+        font-size: 0.82rem;
+    }
+
+
+    /* -----------------------------------------
+       FORMULARIO
+    ----------------------------------------- */
+
+    .pedido-form {
+        padding: 20px 15px;
+
+        gap: 16px;
+    }
+
+
+    /* -----------------------------------------
+       LABEL
+    ----------------------------------------- */
+
+    .form-group label {
+        font-size: 0.72rem;
+    }
+
+
+    /* -----------------------------------------
+       INPUTS
+    ----------------------------------------- */
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.82rem;
+    }
+
+
+    /* -----------------------------------------
+       TÉRMINOS
+    ----------------------------------------- */
+
+    .form-checkbox {
+        gap: 7px;
+    }
+
+    .form-checkbox input {
+        width: 16px;
+        height: 16px;
+    }
+
+    .form-checkbox span {
+        font-size: 0.65rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------
+       BOTÓN
+    ----------------------------------------- */
+
+    .pedido-submit {
+        min-height: 48px;
+
+        font-size: 0.8rem;
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE - MODAL LEGAL
+========================================= */
+
+
+/* =========================================
+   TABLET GRANDE
+   1024px
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .legal-modal {
+        padding: 25px;
+    }
+
+    .legal-modal-container {
+        width: min(760px, 92vw);
+
+        max-height: 88vh;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   900px
+========================================= */
+
+@media (max-width: 900px) {
+
+    .legal-modal {
+        padding: 22px;
+    }
+
+    .legal-modal-container {
+        width: min(720px, 94vw);
+
+        max-height: 88vh;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .legal-modal-header {
+        padding: 26px 28px 22px;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .legal-modal-content {
+        padding: 28px 28px 32px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+   768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    .legal-modal {
+        padding: 18px;
+    }
+
+    .legal-modal-container {
+        width: 100%;
+
+        max-width: 680px;
+
+        max-height: 90vh;
+
+        border-radius: var(--border-radius-md);
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .legal-modal-header {
+        padding: 23px 24px 20px;
+
+        gap: 16px;
+    }
+
+    .legal-modal-header h2 {
+        font-size: clamp(
+            1.45rem,
+            4vw,
+            1.8rem
+        );
+    }
+
+
+    /* -----------------------------------------
+       BOTÓN CERRAR
+    ----------------------------------------- */
+
+    .legal-modal-close {
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 1.45rem;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .legal-modal-content {
+        padding: 25px 24px 30px;
+
+        overflow-y: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .legal-content h3 {
+        font-size: 1.15rem;
+    }
+
+    .legal-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .legal-content p {
+        font-size: 0.83rem;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL
+   600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    .legal-modal {
+        padding: 12px;
+    }
+
+    .legal-modal-container {
+        width: 100%;
+
+        max-width: none;
+
+        max-height: 92vh;
+
+        border-radius: 16px;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .legal-modal-header {
+        padding: 20px;
+
+        gap: 12px;
+    }
+
+    .legal-modal-subtitle {
+        margin-bottom: 6px;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 1.5px;
+    }
+
+    .legal-modal-header h2 {
+        font-size: 1.4rem;
+
+        line-height: 1.15;
+    }
+
+
+    /* -----------------------------------------
+       BOTÓN CERRAR
+    ----------------------------------------- */
+
+    .legal-modal-close {
+        width: 38px;
+
+        height: 38px;
+
+        flex-shrink: 0;
+
+        font-size: 1.35rem;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .legal-modal-content {
+        padding: 22px 20px 28px;
+    }
+
+
+    .legal-content h3 {
+        margin-bottom: 16px;
+
+        font-size: 1.08rem;
+
+        line-height: 1.3;
+    }
+
+    .legal-content h4 {
+        margin-top: 21px;
+
+        margin-bottom: 7px;
+
+        font-size: 0.88rem;
+    }
+
+    .legal-content p {
+        margin-bottom: 14px;
+
+        font-size: 0.8rem;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+   480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    .legal-modal {
+        padding: 8px;
+    }
+
+    .legal-modal-container {
+        max-height: 94vh;
+
+        border-radius: 14px;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .legal-modal-header {
+        padding: 18px 17px;
+
+        gap: 10px;
+    }
+
+    .legal-modal-subtitle {
+        font-size: 0.55rem;
+
+        letter-spacing: 1.3px;
+    }
+
+    .legal-modal-header h2 {
+        font-size: 1.25rem;
+    }
+
+
+    /* -----------------------------------------
+       BOTÓN
+    ----------------------------------------- */
+
+    .legal-modal-close {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 1.25rem;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .legal-modal-content {
+        padding: 20px 17px 25px;
+    }
+
+    .legal-content h3 {
+        font-size: 1rem;
+    }
+
+    .legal-content h4 {
+        margin-top: 19px;
+
+        font-size: 0.84rem;
+    }
+
+    .legal-content p {
+        font-size: 0.77rem;
+
+        line-height: 1.65;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL MUY PEQUEÑO
+   380px
+========================================= */
+
+@media (max-width: 380px) {
+
+    .legal-modal {
+        padding: 5px;
+    }
+
+    .legal-modal-container {
+        max-height: 95vh;
+
+        border-radius: 12px;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+    ----------------------------------------- */
+
+    .legal-modal-header {
+        padding: 16px 14px;
+    }
+
+    .legal-modal-header h2 {
+        font-size: 1.15rem;
+    }
+
+
+    .legal-modal-subtitle {
+        font-size: 0.52rem;
+
+        letter-spacing: 1.1px;
+    }
+
+
+    /* -----------------------------------------
+       BOTÓN
+    ----------------------------------------- */
+
+    .legal-modal-close {
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 1.15rem;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .legal-modal-content {
+        padding: 18px 14px 22px;
+    }
+
+    .legal-content h3 {
+        font-size: 0.96rem;
+    }
+
+    .legal-content h4 {
+        font-size: 0.81rem;
+    }
+
+    .legal-content p {
+        font-size: 0.74rem;
+
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL EN HORIZONTAL
+========================================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+    .legal-modal {
+        padding: 10px 18px;
+    }
+
+    .legal-modal-container {
+        max-height: 94vh;
+    }
+
+    .legal-modal-header {
+        padding: 16px 22px;
+    }
+
+    .legal-modal-content {
+        padding: 18px 22px 24px;
+    }
+
+}
+
+/* =========================================
+   REDES SOCIALES - RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .social-section {
+        padding: 90px 0;
+    }
+
+    .social-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .social-section {
+        padding: 80px 0;
+    }
+
+    .social-header {
+        margin-bottom: 40px;
+    }
+
+    .social-grid {
+        gap: 18px;
+    }
+
+    .social-card {
+        min-height: 175px;
+        padding: 24px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .social-section {
+        padding: 70px 0;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        min-height: 160px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .social-section {
+        padding: 60px 0;
+    }
+
+    .social-container {
+        width: 92%;
+    }
+
+    .social-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .social-header p {
+        font-size: 0.82rem;
+    }
+
+    .social-card {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .social-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.2rem;
+    }
+
+    .social-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .social-section {
+        padding: 55px 0;
+    }
+
+    .social-card {
+        gap: 12px;
+        padding: 17px;
+    }
+
+    .social-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
+
+    .social-content h3 {
+        font-size: 1rem;
+    }
+
+    .social-content p {
+        font-size: 0.7rem;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - UBICACIÓN
+========================================= */
+
+
+/* =========================================
+   TABLET GRANDE
+   1100px
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .ubicacion-container {
+        width: min(
+            var(--container-width),
+            92%
+        );
+    }
+
+    .ubicacion-content {
+        grid-template-columns:
+            minmax(0, 1.3fr)
+            minmax(280px, 0.7fr);
+
+        gap: 24px;
+    }
+
+    .ubicacion-info {
+        padding: 32px;
+    }
+
+    .ubicacion-map,
+    .ubicacion-map iframe {
+        min-height: 450px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   900px
+========================================= */
+
+@media (max-width: 900px) {
+
+    .ubicacion {
+        padding: 100px 0;
+    }
+
+    .ubicacion-container {
+        width: 92%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .ubicacion-header {
+        margin-bottom: 45px;
+    }
+
+    .ubicacion-header h2 {
+        font-size: clamp(
+            2.4rem,
+            6vw,
+            3.6rem
+        );
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .ubicacion-content {
+        grid-template-columns:
+            minmax(0, 1.2fr)
+            minmax(260px, 0.8fr);
+
+        gap: 20px;
+    }
+
+
+    /* -----------------------------------------
+       MAPA
+    ----------------------------------------- */
+
+    .ubicacion-map,
+    .ubicacion-map iframe {
+        min-height: 420px;
+    }
+
+
+    /* -----------------------------------------
+       INFORMACIÓN
+    ----------------------------------------- */
+
+    .ubicacion-info {
+        padding: 28px;
+    }
+
+    .ubicacion-info-header h3 {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+   768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    .ubicacion {
+        padding: 90px 0;
+    }
+
+    .ubicacion-container {
+        width: 92%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .ubicacion-header {
+        max-width: 620px;
+
+        margin-bottom: 40px;
+    }
+
+    .ubicacion-header h2 {
+        font-size: clamp(
+            2.3rem,
+            8vw,
+            3.2rem
+        );
+
+        letter-spacing: -1px;
+    }
+
+    .ubicacion-header p {
+        font-size: 0.92rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* -----------------------------------------
+       CONTENIDO
+    ----------------------------------------- */
+
+    .ubicacion-content {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    /* -----------------------------------------
+       MAPA
+    ----------------------------------------- */
+
+    .ubicacion-map {
+        min-height: 400px;
+
+        border-radius:
+            var(--border-radius-md);
+    }
+
+    .ubicacion-map iframe {
+        width: 100%;
+
+        height: 400px;
+
+        min-height: 400px;
+    }
+
+
+    /* -----------------------------------------
+       INFORMACIÓN
+    ----------------------------------------- */
+
+    .ubicacion-info {
+        padding: 30px;
+
+        border-radius:
+            var(--border-radius-md);
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL
+   600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    .ubicacion {
+        padding: 80px 0;
+    }
+
+    .ubicacion-container {
+        width: 92%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .ubicacion-header {
+        margin-bottom: 32px;
+    }
+
+    .ubicacion-header h2 {
+        font-size: 2.45rem;
+
+        line-height: 1.05;
+    }
+
+    .ubicacion-header p {
+        font-size: 0.87rem;
+
+        line-height: 1.65;
+    }
+
+
+    /* -----------------------------------------
+       MAPA
+    ----------------------------------------- */
+
+    .ubicacion-map {
+        min-height: 330px;
+
+        border-radius:
+            var(--border-radius-md);
+    }
+
+    .ubicacion-map iframe {
+        height: 330px;
+
+        min-height: 330px;
+    }
+
+
+    /* -----------------------------------------
+       INFORMACIÓN
+    ----------------------------------------- */
+
+    .ubicacion-info {
+        padding: 25px 22px;
+    }
+
+
+    /* -----------------------------------------
+       CABECERA
+    ----------------------------------------- */
+
+    .ubicacion-info-header {
+        padding-bottom: 22px;
+    }
+
+    .ubicacion-label {
+        font-size: 0.62rem;
+    }
+
+    .ubicacion-info-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .ubicacion-info-header p {
+        font-size: 0.82rem;
+    }
+
+
+    /* -----------------------------------------
+       ITEMS
+    ----------------------------------------- */
+
+    .ubicacion-item {
+        gap: 12px;
+
+        padding: 18px 0;
+    }
+
+    .ubicacion-icon {
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 0.9rem;
+    }
+
+    .ubicacion-item span {
+        font-size: 0.73rem;
+    }
+
+    .ubicacion-item p {
+        font-size: 0.78rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------
+       BOTÓN
+    ----------------------------------------- */
+
+    .ubicacion-button {
+        min-height: 48px;
+
+        margin-top: 22px;
+
+        font-size: 0.82rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+   480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    .ubicacion {
+        padding: 70px 0;
+    }
+
+    .ubicacion-container {
+        width: 94%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .ubicacion-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .ubicacion-header p {
+        font-size: 0.83rem;
+    }
+
+
+    /* -----------------------------------------
+       MAPA
+    ----------------------------------------- */
+
+    .ubicacion-map {
+        min-height: 300px;
+    }
+
+    .ubicacion-map iframe {
+        height: 300px;
+
+        min-height: 300px;
+    }
+
+
+    /* -----------------------------------------
+       INFORMACIÓN
+    ----------------------------------------- */
+
+    .ubicacion-info {
+        padding: 22px 18px;
+    }
+
+    .ubicacion-info-header h3 {
+        font-size: 1.3rem;
+    }
+
+
+    /* -----------------------------------------
+       ITEMS
+    ----------------------------------------- */
+
+    .ubicacion-item {
+        padding: 16px 0;
+    }
+
+    .ubicacion-icon {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    /* -----------------------------------------
+       BOTÓN
+    ----------------------------------------- */
+
+    .ubicacion-button {
+        min-height: 46px;
+
+        margin-top: 20px;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL MUY PEQUEÑO
+   380px
+========================================= */
+
+@media (max-width: 380px) {
+
+    .ubicacion {
+        padding: 65px 0;
+    }
+
+    .ubicacion-container {
+        width: 95%;
+    }
+
+
+    /* -----------------------------------------
+       ENCABEZADO
+    ----------------------------------------- */
+
+    .ubicacion-header h2 {
+        font-size: 2rem;
+    }
+
+    .ubicacion-header p {
+        font-size: 0.8rem;
+    }
+
+
+    /* -----------------------------------------
+       MAPA
+    ----------------------------------------- */
+
+    .ubicacion-map {
+        min-height: 280px;
+    }
+
+    .ubicacion-map iframe {
+        height: 280px;
+
+        min-height: 280px;
+    }
+
+
+    /* -----------------------------------------
+       INFORMACIÓN
+    ----------------------------------------- */
+
+    .ubicacion-info {
+        padding: 20px 16px;
+    }
+
+    .ubicacion-info-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .ubicacion-item p {
+        font-size: 0.75rem;
+    }
+
+    .ubicacion-button {
+        min-height: 45px;
+
+        font-size: 0.78rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL HORIZONTAL
+========================================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+    .ubicacion {
+        padding: 70px 0;
+    }
+
+    .ubicacion-map,
+    .ubicacion-map iframe {
+        min-height: 320px;
+
+        height: 320px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - FOOTER ZANO
+========================================= */
+
+
+/* =========================================
+   TABLET GRANDE
+   1100px
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .footer-container {
+        width: 92%;
+    }
+
+    .footer-main {
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr
+            1fr;
+
+        gap: 35px;
+
+        padding: 65px 0 50px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   900px
+========================================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        width: 92%;
+    }
+
+    .footer-main {
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
+
+        gap: 40px 30px;
+
+        padding: 60px 0 45px;
+    }
+
+
+    /* -----------------------------------------
+       MARCA
+    ----------------------------------------- */
+
+    .footer-brand {
+        max-width: 280px;
+    }
+
+
+    /* -----------------------------------------
+       REDES
+       Pasa a segunda fila
+    ----------------------------------------- */
+
+    .footer-social {
+        gap: 10px;
+    }
+
+
+    /* -----------------------------------------
+       PARTE INFERIOR
+    ----------------------------------------- */
+
+    .footer-bottom {
+        padding: 22px 0;
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+   768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    .footer-main {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 40px 35px;
+
+        padding: 55px 0 40px;
+    }
+
+
+    /* -----------------------------------------
+       MARCA
+       Ocupa toda la fila
+    ----------------------------------------- */
+
+    .footer-brand {
+        grid-column: 1 / -1;
+
+        max-width: 420px;
+    }
+
+    .footer-brand p {
+        max-width: 360px;
+    }
+
+
+    /* -----------------------------------------
+       COLUMNAS
+    ----------------------------------------- */
+
+    .footer-column h3 {
+        margin-bottom: 17px;
+    }
+
+
+    /* -----------------------------------------
+       PARTE INFERIOR
+    ----------------------------------------- */
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 22px 0 25px;
+    }
+
+    .footer-legal {
+        justify-content: flex-start;
+
+        gap: 12px 20px;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL
+   600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        width: 92%;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+
+        padding: 50px 0 35px;
+    }
+
+
+    /* -----------------------------------------
+       MARCA
+    ----------------------------------------- */
+
+    .footer-brand {
+        grid-column: auto;
+
+        max-width: 100%;
+    }
+
+    .footer-logo {
+        margin-bottom: 16px;
+    }
+
+    .footer-logo img {
+        width: 130px;
+    }
+
+    .footer-brand p {
+        max-width: 320px;
+
+        font-size: 0.82rem;
+
+        line-height: 1.65;
+    }
+
+
+    /* -----------------------------------------
+       COLUMNAS
+    ----------------------------------------- */
+
+    .footer-column h3 {
+        margin-bottom: 14px;
+
+        font-size: 0.82rem;
+    }
+
+    .footer-column ul {
+        gap: 9px;
+    }
+
+    .footer-column li,
+    .footer-column a {
+        font-size: 0.78rem;
+    }
+
+
+    /* -----------------------------------------
+       REDES
+    ----------------------------------------- */
+
+    .footer-social {
+        gap: 9px;
+    }
+
+
+    /* -----------------------------------------
+       PARTE INFERIOR
+    ----------------------------------------- */
+
+    .footer-bottom {
+        gap: 18px;
+
+        padding: 20px 0 23px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.68rem;
+
+        line-height: 1.6;
+    }
+
+    .footer-legal {
+        width: 100%;
+
+        gap: 10px 18px;
+    }
+
+    .footer-legal button {
+        font-size: 0.68rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL PEQUEÑO
+   480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    .footer-container {
+        width: 94%;
+    }
+
+    .footer-main {
+        gap: 28px;
+
+        padding: 45px 0 32px;
+    }
+
+
+    /* -----------------------------------------
+       LOGO
+    ----------------------------------------- */
+
+    .footer-logo img {
+        width: 120px;
+    }
+
+
+    /* -----------------------------------------
+       TEXTO
+    ----------------------------------------- */
+
+    .footer-brand p {
+        font-size: 0.79rem;
+    }
+
+
+    /* -----------------------------------------
+       COLUMNAS
+    ----------------------------------------- */
+
+    .footer-column h3 {
+        font-size: 0.8rem;
+    }
+
+    .footer-column li,
+    .footer-column a {
+        font-size: 0.76rem;
+    }
+
+
+    /* -----------------------------------------
+       COPYRIGHT
+    ----------------------------------------- */
+
+    .footer-bottom p {
+        font-size: 0.65rem;
+    }
+
+
+    /* -----------------------------------------
+       LEGAL
+    ----------------------------------------- */
+
+    .footer-legal {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 9px;
+    }
+
+    .footer-legal button {
+        font-size: 0.66rem;
+    }
+
+}
+
+
+/* =========================================
+   MÓVIL MUY PEQUEÑO
+   380px
+========================================= */
+
+@media (max-width: 380px) {
+
+    .footer-container {
+        width: 95%;
+    }
+
+    .footer-main {
+        gap: 25px;
+
+        padding: 40px 0 28px;
+    }
+
+
+    /* -----------------------------------------
+       LOGO
+    ----------------------------------------- */
+
+    .footer-logo img {
+        width: 110px;
+    }
+
+
+    /* -----------------------------------------
+       MARCA
+    ----------------------------------------- */
+
+    .footer-brand p {
+        font-size: 0.76rem;
+    }
+
+
+    /* -----------------------------------------
+       COLUMNAS
+    ----------------------------------------- */
+
+    .footer-column h3 {
+        font-size: 0.77rem;
+    }
+
+    .footer-column li,
+    .footer-column a {
+        font-size: 0.73rem;
+    }
+
+
+    /* -----------------------------------------
+       COPYRIGHT
+    ----------------------------------------- */
+
+    .footer-bottom p {
+        font-size: 0.62rem;
+    }
+
+    .footer-legal button {
+        font-size: 0.63rem;
+    }
+
+}
+

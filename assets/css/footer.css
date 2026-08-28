@@ -1,0 +1,505 @@
+/* =========================================
+   FOOTER ZANO
+========================================= */
+
+.footer {
+    width: 100%;
+
+    background-color:
+        var(--color-primary);
+
+    color:
+        var(--color-secondary);
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+/*
+   Bootstrap ya proporciona .container,
+   pero agregamos margen interno para
+   que el contenido no quede pegado
+   a los extremos.
+*/
+
+.footer > .container {
+
+    width: 90%;
+
+    max-width: var(--container-width);
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    padding-left: 0;
+
+    padding-right: 0;
+}
+
+
+/* =========================================
+   PARTE PRINCIPAL
+========================================= */
+
+.footer-main {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding:
+        75px 0 60px;
+}
+
+
+/* =========================================
+   MARCA
+========================================= */
+
+.footer-brand {
+
+    flex: 1 1 auto;
+
+    max-width: 320px;
+
+    min-width: 0;
+}
+
+
+.footer-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    text-decoration: none;
+}
+
+
+.footer-logo img {
+
+    display: block;
+
+    width: 145px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    transition:
+        transform var(--transition-normal);
+}
+
+
+.footer-logo:hover img {
+
+    transform:
+        scale(1.03);
+}
+
+
+.footer-brand p {
+
+    max-width: 280px;
+
+    margin: 0;
+
+    color:
+        rgba(245, 239, 230, 0.72);
+
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   COLUMNAS DERECHA
+========================================= */
+
+.footer-column {
+
+    flex:
+        0 0 auto;
+
+    min-width: 150px;
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.footer-column h3 {
+
+    margin:
+        0 0 20px;
+
+    color:
+        var(--color-secondary);
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   LISTAS
+========================================= */
+
+.footer-column ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.footer-column li {
+
+    color:
+        rgba(245, 239, 230, 0.68);
+
+    font-size: 0.8rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ENLACES
+========================================= */
+
+.footer-column a {
+
+    color:
+        rgba(245, 239, 230, 0.68);
+
+    font-size: 0.8rem;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition:
+        color var(--transition-normal);
+}
+
+
+.footer-column a:hover {
+
+    color:
+        var(--color-secondary);
+}
+
+
+/* =========================================
+   PARTE INFERIOR
+========================================= */
+
+.footer-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    width: 100%;
+
+    padding:
+        25px 0;
+
+    border-top:
+        1px solid
+        rgba(245, 239, 230, 0.15);
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-bottom p {
+
+    flex:
+        0 0 auto;
+
+    margin: 0;
+
+    white-space: nowrap;
+
+    color:
+        rgba(245, 239, 230, 0.55);
+
+    font-size: 0.72rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ENLACES LEGALES
+========================================= */
+
+.footer-legal {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex:
+        0 0 auto;
+
+    gap: 22px;
+
+    white-space: nowrap;
+}
+
+
+.footer-legal button {
+
+    flex:
+        0 0 auto;
+
+    padding: 0;
+
+    border: none;
+
+    background-color:
+        transparent;
+
+    color:
+        rgba(245, 239, 230, 0.65);
+
+    font-family: inherit;
+
+    font-size: 0.72rem;
+
+    line-height: 1.5;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-normal);
+}
+
+
+.footer-legal button:hover {
+
+    color:
+        var(--color-secondary);
+
+    text-decoration:
+        underline;
+}
+
+
+/* =========================================
+   FOCUS - ACCESIBILIDAD
+========================================= */
+
+.footer a:focus-visible,
+.footer button:focus-visible {
+
+    outline:
+        2px solid
+        var(--color-secondary);
+
+    outline-offset:
+        4px;
+
+    border-radius:
+        3px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* -------------------------------------
+       CONTENEDOR
+    ------------------------------------- */
+
+    .footer > .container {
+
+        width: 90%;
+    }
+
+
+    /* -------------------------------------
+       PARTE PRINCIPAL
+    ------------------------------------- */
+
+    .footer-main {
+
+        gap: 40px;
+
+        padding:
+            60px 0 45px;
+    }
+
+
+    /* -------------------------------------
+       MARCA
+    ------------------------------------- */
+
+    .footer-brand {
+
+        max-width: 280px;
+    }
+
+
+    /* -------------------------------------
+       PARTE INFERIOR
+    ------------------------------------- */
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 15px;
+    }
+
+
+    .footer-bottom p {
+
+        white-space: normal;
+    }
+
+
+    .footer-legal {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        white-space: normal;
+
+        gap: 15px 22px;
+    }
+
+
+    .footer-legal button {
+
+        white-space: normal;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULAR
+========================================= */
+
+@media (max-width: 576px) {
+
+    /* -------------------------------------
+       PARTE PRINCIPAL
+    ------------------------------------- */
+
+    .footer-main {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 40px;
+
+        padding:
+            50px 0 40px;
+    }
+
+
+    /* -------------------------------------
+       MARCA
+    ------------------------------------- */
+
+    .footer-brand {
+
+        max-width: 100%;
+    }
+
+
+    .footer-brand p {
+
+        max-width: 300px;
+    }
+
+
+    /* -------------------------------------
+       COLUMNAS
+    ------------------------------------- */
+
+    .footer-column {
+
+        min-width: 0;
+
+        width: 100%;
+    }
+
+
+    /* -------------------------------------
+       PARTE INFERIOR
+    ------------------------------------- */
+
+    .footer-bottom {
+
+        align-items: flex-start;
+
+        text-align: left;
+
+        gap: 15px;
+
+        padding:
+            22px 0;
+    }
+
+
+    .footer-legal {
+
+        align-items: flex-start;
+
+        justify-content: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}

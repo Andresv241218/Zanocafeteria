@@ -1,0 +1,1918 @@
+/* =========================================
+   HERO ZANO
+========================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: var(--color-primary);
+}
+
+
+/* =========================================
+   VÍDEO DE FONDO
+========================================= */
+
+.hero-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CAPA SOBRE EL VÍDEO
+========================================= */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(33, 24, 21, 0.78) 0%,
+            rgba(33, 24, 21, 0.48) 45%,
+            rgba(33, 24, 21, 0.25) 100%
+        );
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    padding-top: 80px;
+
+    color: var(--color-white);
+
+    text-align: left;
+}
+
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+
+.hero-subtitle {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: var(--color-secondary);
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.hero-content h1 {
+    max-width: 750px;
+
+    margin-bottom: 25px;
+
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.hero-content p {
+    max-width: 520px;
+
+    margin-bottom: 35px;
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* Botón general */
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 150px;
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    border-radius: var(--border-radius-xl);
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    transition:
+        transform var(--transition-normal),
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+
+/* Botón principal */
+
+.hero-button-primary {
+    background-color: var(--color-secondary);
+
+    color: var(--color-primary);
+}
+
+.hero-button-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-lg);
+
+    background-color: var(--color-white);
+}
+
+
+/* Botón secundario */
+
+.hero-button-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    color: var(--color-white);
+
+    background-color: transparent;
+}
+
+.hero-button-secondary:hover {
+    transform: translateY(-3px);
+
+    background-color: var(--color-white);
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================
+   INDICADOR DE SCROLL
+========================================= */
+
+.hero-scroll {
+    position: absolute;
+
+    bottom: 35px;
+    left: 50%;
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transform: translateX(-50%);
+
+    text-decoration: none;
+
+    color: var(--color-white);
+
+    opacity: 0.8;
+
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.hero-scroll:hover {
+    opacity: 1;
+
+    transform: translateX(-50%) translateY(-3px);
+}
+
+.hero-scroll span {
+    display: block;
+
+    width: 1px;
+    height: 35px;
+
+    background-color: var(--color-white);
+}
+
+.hero-scroll small {
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+/* =========================================
+   PROPUESTA ZANO
+========================================= */
+
+.propuesta {
+    width: 100%;
+
+    padding: 120px 0;
+
+    background-color: var(--color-secondary);
+}
+
+
+.propuesta-container {
+    width: min(
+        var(--container-width),
+        90%
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.propuesta-image {
+    width: 100%;
+
+    height: 600px;
+
+    overflow: hidden;
+
+    border-radius: var(--border-radius-lg);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+.propuesta-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform var(--transition-slow);
+}
+
+
+.propuesta-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.propuesta-content {
+    max-width: 540px;
+}
+
+
+.section-subtitle {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--color-primary);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.propuesta-content h2 {
+    margin-bottom: 25px;
+
+    color: var(--color-text);
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+}
+
+
+.propuesta-content h2 span {
+    color: var(--color-primary);
+}
+
+
+.propuesta-content > p {
+    margin-bottom: 35px;
+
+    color: var(--color-text-light);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CARACTERÍSTICAS
+========================================= */
+
+.propuesta-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+.feature {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+
+.feature-icon {
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--color-primary);
+
+    color: var(--color-secondary);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+}
+
+
+.feature h3 {
+    margin-bottom: 3px;
+
+    color: var(--color-text);
+
+    font-size: 1rem;
+}
+
+
+.feature p {
+    color: var(--color-text-light);
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+/* =========================================
+   CARTA
+========================================= */
+
+.carta {
+    width: 100%;
+
+    padding: 120px 0;
+
+    background-color: var(--color-background);
+}
+
+
+.carta-container {
+    width: min(
+        var(--container-width),
+        90%
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.carta-header {
+    max-width: 650px;
+
+    margin-bottom: 60px;
+}
+
+
+.carta-header h2 {
+    margin-bottom: 20px;
+
+    color: var(--color-text);
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+}
+
+
+.carta-header h2 span {
+    color: var(--color-primary);
+}
+
+
+.carta-header p {
+    max-width: 550px;
+
+    color: var(--color-text-light);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CATEGORÍAS
+========================================= */
+
+.carta-categorias {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.carta-card {
+    position: relative;
+
+    display: block;
+
+    overflow: hidden;
+
+    background-color: var(--color-secondary);
+
+    border-radius: var(--border-radius-lg);
+
+    text-decoration: none;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+
+.carta-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.carta-card-image {
+    width: 100%;
+
+    height: 330px;
+
+    overflow: hidden;
+}
+
+
+.carta-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform var(--transition-slow);
+}
+
+
+.carta-card:hover .carta-card-image img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.carta-card-content {
+    padding: 28px;
+}
+
+
+.carta-card-content > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--color-accent);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.carta-card-content h3 {
+    margin-bottom: 10px;
+
+    color: var(--color-text);
+
+    font-size: 1.8rem;
+}
+
+
+.carta-card-content p {
+    margin-bottom: 20px;
+
+    color: var(--color-text-light);
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+.carta-card-content strong {
+    color: var(--color-primary);
+
+    font-size: 0.85rem;
+
+    transition: color var(--transition-normal);
+}
+
+
+.carta-card:hover .carta-card-content strong {
+    color: var(--color-primary-dark);
+}
+
+
+/* =========================================
+   BOTÓN CARTA COMPLETA
+========================================= */
+
+.carta-action {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 55px;
+}
+
+
+.carta-button {
+    min-height: 50px;
+
+    padding: 0 30px;
+
+    border: 1px solid var(--color-primary);
+
+    border-radius: var(--border-radius-xl);
+
+    background-color: transparent;
+
+    color: var(--color-primary);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+
+.carta-button:hover {
+    background-color: var(--color-primary);
+
+    color: var(--color-secondary);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-md);
+}
+
+/* =========================================
+   CARTA
+========================================= */
+
+.carta {
+    width: 100%;
+    padding: 120px 0;
+
+    background-color: var(--color-background);
+}
+
+.carta-container {
+    width: min(var(--container-width), 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.carta-header {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.carta-header h2 {
+    margin-bottom: 20px;
+
+    color: var(--color-text);
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+
+.carta-header h2 span {
+    color: var(--color-primary);
+}
+
+.carta-header p {
+    max-width: 550px;
+
+    color: var(--color-text-light);
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CATEGORÍAS
+========================================= */
+
+.carta-categorias {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.carta-card {
+    overflow: hidden;
+
+    background-color: var(--color-secondary);
+
+    border-radius: var(--border-radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.carta-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* =========================================
+   IMAGEN / CARRUSEL
+========================================= */
+
+.carta-card-image {
+    position: relative;
+
+    width: 100%;
+    height: 330px;
+
+    overflow: hidden;
+}
+
+.carta-slides {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.carta-slide {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition: opacity var(--transition-slow);
+}
+
+.carta-slide.active {
+    opacity: 1;
+}
+
+
+/* =========================================
+   CONTROLES DEL CARRUSEL
+========================================= */
+
+.carta-slider-button {
+    position: absolute;
+
+    top: 50%;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: rgba(245, 239, 230, 0.9);
+
+    color: var(--color-primary);
+
+    font-size: 1.5rem;
+
+    line-height: 1;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition:
+        opacity var(--transition-normal),
+        background-color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.carta-slider:hover .carta-slider-button {
+    opacity: 1;
+}
+
+.carta-slider-button:hover {
+    background-color: var(--color-white);
+
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carta-slider-prev {
+    left: 15px;
+}
+
+.carta-slider-next {
+    right: 15px;
+}
+
+
+/* =========================================
+   PUNTOS DEL CARRUSEL
+========================================= */
+
+.carta-slider-dots {
+    position: absolute;
+
+    bottom: 15px;
+    left: 50%;
+
+    display: flex;
+
+    gap: 7px;
+
+    transform: translateX(-50%);
+}
+
+.carta-dot {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: rgba(245, 239, 230, 0.65);
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-normal),
+        background-color var(--transition-normal);
+}
+
+.carta-dot.active {
+    background-color: var(--color-white);
+
+    transform: scale(1.25);
+}
+
+
+/* =========================================
+   CONTENIDO DE LA TARJETA
+========================================= */
+
+.carta-card-content {
+    padding: 28px;
+}
+
+.carta-card-content > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--color-accent);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.carta-card-content h3 {
+    margin-bottom: 10px;
+
+    color: var(--color-text);
+
+    font-size: 1.8rem;
+}
+
+.carta-card-content p {
+    margin-bottom: 20px;
+
+    color: var(--color-text-light);
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BOTÓN DE CADA CATEGORÍA
+========================================= */
+
+.carta-card-button {
+    padding: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--color-primary);
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.carta-card-button:hover {
+    color: var(--color-primary-dark);
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   BOTÓN CARTA COMPLETA
+========================================= */
+
+.carta-action {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 55px;
+}
+
+.carta-button {
+    min-height: 50px;
+
+    padding: 0 30px;
+
+    border: 1px solid var(--color-primary);
+
+    border-radius: var(--border-radius-xl);
+
+    background-color: transparent;
+
+    color: var(--color-primary);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.carta-button:hover {
+    background-color: var(--color-primary);
+
+    color: var(--color-secondary);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-md);
+}
+
+/* =========================================
+   MODAL CARTA
+========================================= */
+
+.carta-modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    z-index: var(--z-modal);
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal);
+}
+
+.carta-modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.carta-modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(33, 24, 21, 0.82);
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.carta-modal-container {
+    position: relative;
+
+    width: min(1000px, 95vw);
+
+    max-height: 94vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background-color: var(--color-secondary);
+
+    border-radius: var(--border-radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+    transform: translateY(25px) scale(0.97);
+
+    transition: transform var(--transition-normal);
+
+    z-index: 1;
+}
+
+.carta-modal.active .carta-modal-container {
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.carta-modal-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 28px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+.carta-modal-subtitle {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--color-accent);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.carta-modal-header h2 {
+    color: var(--color-text);
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================
+   BOTÓN CERRAR
+========================================= */
+
+.carta-modal-close {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: var(--color-background);
+
+    color: var(--color-primary);
+
+    font-size: 1.8rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.carta-modal-close:hover {
+    background-color: var(--color-primary);
+
+    color: var(--color-secondary);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.carta-modal-content {
+    position: relative;
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 75px;
+
+    background-color: var(--color-background);
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.carta-modal-image-wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.carta-modal-image-wrapper img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 68vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: var(--border-radius-sm);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================
+   FLECHAS
+========================================= */
+
+.carta-modal-arrow {
+    position: absolute;
+
+    top: 50%;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: var(--color-secondary);
+
+    color: var(--color-primary);
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+
+    box-shadow: var(--shadow-md);
+
+    z-index: 2;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.carta-modal-arrow:hover {
+    background-color: var(--color-primary);
+
+    color: var(--color-secondary);
+
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carta-modal-prev {
+    left: 18px;
+}
+
+.carta-modal-next {
+    right: 18px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.carta-modal-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 16px 28px;
+
+    border-top: 1px solid var(--border-color);
+
+    background-color: var(--color-secondary);
+}
+
+
+/* =========================================
+   PUNTOS
+========================================= */
+
+.carta-modal-dots {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.carta-modal-dot {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: var(--color-accent);
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-normal),
+        background-color var(--transition-normal);
+}
+
+.carta-modal-dot.active {
+    background-color: var(--color-primary);
+
+    transform: scale(1.3);
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.carta-modal-counter {
+    color: var(--color-text-light);
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+}
+
+/* =========================================
+   CONTENEDOR DE IMAGEN
+========================================= */
+
+.carta-modal-image-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: auto;
+
+    cursor: default;
+
+    scrollbar-width: thin;
+}
+
+
+/* =========================================
+   IMAGEN CON ZOOM
+========================================= */
+
+.carta-modal-image-wrapper img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 68vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: var(--border-radius-sm);
+
+    box-shadow: var(--shadow-md);
+
+    transform: scale(1);
+
+    transform-origin: center center;
+
+    transition: transform 0.25s ease;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+
+
+/* =========================================
+   IMAGEN AMPLIADA
+========================================= */
+
+.carta-modal-image-wrapper.zoomed {
+    cursor: grab;
+}
+
+.carta-modal-image-wrapper.zoomed:active {
+    cursor: grabbing;
+}
+
+
+/* =========================================
+   CONTROLES DE ZOOM
+========================================= */
+
+.carta-zoom-controls {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 5px;
+
+    background-color: rgba(245, 239, 230, 0.95);
+
+    border-radius: var(--border-radius-xl);
+
+    box-shadow: var(--shadow-md);
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   BOTONES ZOOM
+========================================= */
+
+.carta-zoom-controls button {
+    min-width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    color: var(--color-primary);
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.carta-zoom-controls button:hover {
+    background-color: var(--color-primary);
+
+    color: var(--color-secondary);
+
+    transform: scale(1.05);
+}
+
+
+/* Botón central */
+
+#carta-zoom-reset {
+    min-width: 55px;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================================
+   REDES SOCIALES - ZANO
+========================================= */
+
+.social-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        110px 0;
+
+    background-color:
+        var(--color-background);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.social-container {
+
+    width: min(
+        var(--container-width),
+        90%
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.social-header {
+
+    max-width: 650px;
+
+    margin:
+        0 auto 55px;
+
+    text-align: center;
+}
+
+
+.social-subtitle {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color:
+        var(--color-accent);
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+
+.social-header h2 {
+
+    margin: 0 0 18px;
+
+    color:
+        var(--color-text);
+
+    font-size:
+        clamp(2.2rem, 5vw, 3.6rem);
+
+    line-height: 1.1;
+}
+
+
+.social-header h2 span {
+
+    color:
+        var(--color-primary);
+}
+
+
+.social-header p {
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    color:
+        var(--color-text-light);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.social-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.social-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 190px;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    background-color:
+        var(--color-secondary);
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius:
+        var(--border-radius-md);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    color:
+        var(--color-text);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* =========================================
+   EFECTO DE FONDO
+========================================= */
+
+.social-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+
+    right: -100px;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(59, 37, 32, 0.05);
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.social-card:hover::before {
+
+    transform:
+        scale(1.7);
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.social-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(59, 37, 32, 0.18);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+
+/* =========================================
+   ICONO
+========================================= */
+
+.social-icon {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 58px;
+
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color:
+        var(--color-primary);
+
+    color:
+        var(--color-secondary);
+
+    font-size: 1.35rem;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.social-card:hover .social-icon {
+
+    transform:
+        rotate(-8deg)
+        scale(1.1);
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.social-content {
+
+    position: relative;
+
+    z-index: 1;
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.social-content span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--color-accent);
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+}
+
+
+.social-content h3 {
+
+    margin: 0 0 8px;
+
+    color:
+        var(--color-text);
+
+    font-size: 1.15rem;
+
+    line-height: 1.2;
+}
+
+
+.social-content p {
+
+    margin: 0;
+
+    color:
+        var(--color-text-light);
+
+    font-size: 0.76rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FLECHA
+========================================= */
+
+.social-arrow {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 36px;
+
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 50%;
+
+    color:
+        var(--color-primary);
+
+    font-size: 0.9rem;
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+.social-card:hover .social-arrow {
+
+    background-color:
+        var(--color-primary);
+
+    color:
+        var(--color-secondary);
+
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+========================================= */
+
+.social-card:focus-visible {
+
+    outline:
+        2px solid var(--color-primary);
+
+    outline-offset:
+        5px;
+}
