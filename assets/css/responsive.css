@@ -2449,6 +2449,8 @@
 
     .ubicacion-map {
 
+        width: 100%;
+
         min-height: 450px;
 
         overflow: hidden;
@@ -2458,13 +2460,13 @@
 
     .ubicacion-map iframe {
 
+        display: block;
+
         width: 100%;
 
         height: 450px;
 
         min-height: 450px;
-
-        display: block;
 
         border: 0;
 
@@ -2537,6 +2539,8 @@
 
     .ubicacion-map {
 
+        width: 100%;
+
         min-height: 420px;
 
         overflow: hidden;
@@ -2546,13 +2550,15 @@
 
     .ubicacion-map iframe {
 
+        display: block;
+
         width: 100%;
 
         height: 420px;
 
         min-height: 420px;
 
-        display: block;
+        border: 0;
 
     }
 
@@ -2645,7 +2651,11 @@
 
         flex-direction: column;
 
-        gap: 20px;
+        width: 100%;
+
+        gap: 25px;
+
+        position: relative;
 
     }
 
@@ -2656,6 +2666,8 @@
 
     .ubicacion-info {
 
+        position: relative;
+
         order: 1;
 
         width: 100%;
@@ -2664,8 +2676,7 @@
 
         padding: 30px;
 
-        border-radius:
-            var(--border-radius-md);
+        z-index: 2;
 
     }
 
@@ -2676,15 +2687,21 @@
 
     .ubicacion-map {
 
+        position: relative;
+
         order: 2;
 
         width: 100%;
 
-        min-height: 400px;
-
         height: 400px;
 
+        min-height: 400px;
+
+        box-sizing: border-box;
+
         overflow: hidden;
+
+        z-index: 1;
 
         border-radius:
             var(--border-radius-md);
@@ -2694,13 +2711,19 @@
 
     .ubicacion-map iframe {
 
-        width: 100%;
-
-        height: 400px;
-
-        min-height: 400px;
+        position: relative;
 
         display: block;
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        min-height: 0 !important;
+
+        margin: 0;
+
+        padding: 0;
 
         border: 0;
 
@@ -2863,20 +2886,20 @@
 
     .ubicacion-map {
 
-        min-height: 330px;
-
         height: 330px;
+
+        min-height: 330px;
 
     }
 
 
     .ubicacion-map iframe {
 
-        width: 100%;
+        width: 100% !important;
 
-        height: 330px;
+        height: 100% !important;
 
-        min-height: 330px;
+        min-height: 0 !important;
 
     }
 
@@ -2979,18 +3002,18 @@
 
     .ubicacion-map {
 
-        min-height: 300px;
-
         height: 300px;
+
+        min-height: 300px;
 
     }
 
 
     .ubicacion-map iframe {
 
-        height: 300px;
+        height: 100% !important;
 
-        min-height: 300px;
+        min-height: 0 !important;
 
     }
 
@@ -3080,18 +3103,18 @@
 
     .ubicacion-map {
 
-        min-height: 280px;
-
         height: 280px;
+
+        min-height: 280px;
 
     }
 
 
     .ubicacion-map iframe {
 
-        height: 280px;
+        height: 100% !important;
 
-        min-height: 280px;
+        min-height: 0 !important;
 
     }
 
@@ -3113,24 +3136,22 @@
 
     .ubicacion-map {
 
-        min-height: 320px;
-
         height: 320px;
+
+        min-height: 320px;
 
     }
 
 
     .ubicacion-map iframe {
 
-        height: 320px;
+        height: 100% !important;
 
-        min-height: 320px;
+        min-height: 0 !important;
 
     }
 
 }
-
-
 /* =========================================
    RESPONSIVE - FOOTER ZANO
 ========================================= */
