@@ -35,16 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    const productoInput =
-        document.getElementById(
-            "pedido-producto"
-        );
-
-
-    const precioInput =
-        document.getElementById(
-            "pedido-precio"
-        );
 
 
     const comentariosInput =
@@ -330,13 +320,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 celularInput?.value.trim() || "";
 
 
-            const producto =
-                productoInput?.value.trim() || "";
-
-
-            const precio =
-                precioInput?.value.trim() || "";
-
 
             const comentarios =
                 comentariosInput?.value.trim() || "";
@@ -362,12 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 `Celular / WhatsApp: ${celular}\n\n`;
 
 
-            mensaje +=
-                `Producto: ${producto}\n`;
 
-
-            mensaje +=
-                `Precio: ${precio}\n`;
 
 
             if (comentarios) {
