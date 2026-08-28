@@ -4,47 +4,59 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+
     /* =====================================
        WHATSAPP ZANO
     ===================================== */
 
-    const WHATSAPP_ZANO = "51932727029"; 
+    const WHATSAPP_ZANO =
+        "51932727029";
+
 
     /* =====================================
        ELEMENTOS
     ===================================== */
 
-    const form = document.getElementById(
-        "pedido-form"
-    );
+    const form =
+        document.getElementById(
+            "pedido-form"
+        );
 
-    const nombreInput = document.getElementById(
-        "pedido-nombre"
-    );
 
-    const celularInput = document.getElementById(
-        "pedido-celular"
-    );
+    const nombreInput =
+        document.getElementById(
+            "pedido-nombre"
+        );
 
-    const productoInput = document.getElementById(
-        "pedido-producto"
-    );
 
-    const precioInput = document.getElementById(
-        "pedido-precio"
-    );
+    const celularInput =
+        document.getElementById(
+            "pedido-celular"
+        );
 
-    const comentariosInput = document.getElementById(
-        "pedido-comentarios"
-    );
 
-    const terminosInput = document.getElementById(
-        "pedido-terminos"
-    );
+    const productoInput =
+        document.getElementById(
+            "pedido-producto"
+        );
 
-    const submitButton = form?.querySelector(
-        ".pedido-submit"
-    );
+
+    const precioInput =
+        document.getElementById(
+            "pedido-precio"
+        );
+
+
+    const comentariosInput =
+        document.getElementById(
+            "pedido-comentarios"
+        );
+
+
+    const terminosInput =
+        document.getElementById(
+            "pedido-terminos"
+        );
 
 
     /* =====================================
@@ -67,6 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================== */
 
     const validarNombre = () => {
+
+        if (!nombreInput) {
+            return true;
+        }
+
 
         const nombre =
             nombreInput.value.trim();
@@ -95,6 +112,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================== */
 
     const validarCelular = () => {
+
+        if (!celularInput) {
+            return true;
+        }
+
 
         const celular =
             celularInput.value.trim();
@@ -145,6 +167,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const validarProducto = () => {
 
+        if (!productoInput) {
+            return true;
+        }
+
+
         const producto =
             productoInput.value.trim();
 
@@ -173,6 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const validarTerminos = () => {
 
+        if (!terminosInput) {
+            return true;
+        }
+
+
         if (!terminosInput.checked) {
 
             terminosInput.setCustomValidity(
@@ -200,19 +232,40 @@ document.addEventListener("DOMContentLoaded", () => {
         validarNombre
     );
 
+
     celularInput?.addEventListener(
         "input",
         validarCelular
     );
+
 
     productoInput?.addEventListener(
         "input",
         validarProducto
     );
 
+
     terminosInput?.addEventListener(
         "change",
         validarTerminos
+    );
+
+
+    /* =====================================
+       EVITAR LETRAS EN CELULAR
+    ===================================== */
+
+    celularInput?.addEventListener(
+        "input",
+        () => {
+
+            celularInput.value =
+                celularInput.value.replace(
+                    /[^0-9\s-]/g,
+                    ""
+                );
+
+        }
     );
 
 
@@ -227,26 +280,29 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
 
 
-            /* =================================
+            /* ---------------------------------
                VALIDAR CAMPOS
-            ================================= */
+            --------------------------------- */
 
             const nombreValido =
                 validarNombre();
 
+
             const celularValido =
                 validarCelular();
 
+
             const productoValido =
                 validarProducto();
+
 
             const terminosValidos =
                 validarTerminos();
 
 
-            /* =================================
+            /* ---------------------------------
                COMPROBAR VALIDACIÓN
-            ================================= */
+            --------------------------------- */
 
             if (
                 !nombreValido ||
@@ -262,44 +318,53 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
-            /* =================================
+            /* ---------------------------------
                OBTENER DATOS
-            ================================= */
+            --------------------------------- */
 
             const nombre =
-                nombreInput.value.trim();
+                nombreInput?.value.trim() || "";
+
 
             const celular =
-                celularInput.value.trim();
+                celularInput?.value.trim() || "";
+
 
             const producto =
-                productoInput.value.trim();
+                productoInput?.value.trim() || "";
+
 
             const precio =
-                precioInput.value.trim();
+                precioInput?.value.trim() || "";
+
 
             const comentarios =
-                comentariosInput.value.trim();
+                comentariosInput?.value.trim() || "";
 
 
-            /* =================================
+            /* ---------------------------------
                CREAR MENSAJE
-            ================================= */
+            --------------------------------- */
 
             let mensaje =
                 "Hola ZANO 👋\n\n";
 
+
             mensaje +=
                 "Quiero realizar un pedido.\n\n";
+
 
             mensaje +=
                 `Nombre: ${nombre}\n`;
 
+
             mensaje +=
                 `Celular / WhatsApp: ${celular}\n\n`;
 
+
             mensaje +=
                 `Producto: ${producto}\n`;
+
 
             mensaje +=
                 `Precio: ${precio}\n`;
@@ -317,60 +382,42 @@ document.addEventListener("DOMContentLoaded", () => {
                 "\nAcepto los términos y condiciones y la política de privacidad.";
 
 
-            /* =================================
-               MOSTRAR EN CONSOLA
-            ================================= */
+            /* ---------------------------------
+               CREAR URL DE WHATSAPP
+            --------------------------------- */
+
+            const mensajeWhatsApp =
+                encodeURIComponent(
+                    mensaje
+                );
+
+
+            const whatsappURL =
+                `https://wa.me/${WHATSAPP_ZANO}?text=${mensajeWhatsApp}`;
+
+
+            /* ---------------------------------
+               CONSOLA
+            --------------------------------- */
 
             console.log(
                 "Pedido preparado:"
             );
+
 
             console.log(
                 mensaje
             );
 
 
-/* =================================
-   ABRIR WHATSAPP
-================================= */
+            /* ---------------------------------
+               ABRIR WHATSAPP
+            --------------------------------- */
 
-const mensajeWhatsApp =
-    encodeURIComponent(mensaje);
-
-const whatsappURL =
-    `https://wa.me/${WHATSAPP_ZANO}?text=${mensajeWhatsApp}`;
-
-
-/* =================================
-   ABRIR WHATSAPP
-================================= */
-
-window.open(
-    whatsappURL,
-    "_blank"
-);
-
-            alert(
-                "¡Pedido preparado correctamente!"
+            window.open(
+                whatsappURL,
+                "_blank"
             );
-
-        }
-    );
-
-
-    /* =====================================
-       EVITAR LETRAS EN CELULAR
-    ===================================== */
-
-    celularInput?.addEventListener(
-        "input",
-        () => {
-
-            celularInput.value =
-                celularInput.value.replace(
-                    /[^0-9\s-]/g,
-                    ""
-                );
 
         }
     );
