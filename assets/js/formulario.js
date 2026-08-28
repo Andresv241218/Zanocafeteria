@@ -1,5 +1,5 @@
 /* =========================================
-   FORMULARIO DE PEDIDO - ZANO
+   FORMULARIO DE CONTACTO - ZANO
 ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-
-
     const comentariosInput =
         document.getElementById(
             "pedido-comentarios"
@@ -56,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!form) {
 
         console.warn(
-            "No se encontró el formulario de pedido."
+            "No se encontró el formulario."
         );
 
         return;
@@ -152,39 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================
-       VALIDAR PRODUCTO
-    ===================================== */
-
-    const validarProducto = () => {
-
-        if (!productoInput) {
-            return true;
-        }
-
-
-        const producto =
-            productoInput.value.trim();
-
-
-        if (!producto) {
-
-            productoInput.setCustomValidity(
-                "Selecciona un producto."
-            );
-
-            return false;
-
-        }
-
-
-        productoInput.setCustomValidity("");
-
-        return true;
-
-    };
-
-
-    /* =====================================
        VALIDAR TÉRMINOS
     ===================================== */
 
@@ -226,12 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
     celularInput?.addEventListener(
         "input",
         validarCelular
-    );
-
-
-    productoInput?.addEventListener(
-        "input",
-        validarProducto
     );
 
 
@@ -282,10 +241,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 validarCelular();
 
 
-            const productoValido =
-                validarProducto();
-
-
             const terminosValidos =
                 validarTerminos();
 
@@ -297,7 +252,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (
                 !nombreValido ||
                 !celularValido ||
-                !productoValido ||
                 !terminosValidos
             ) {
 
@@ -320,7 +274,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 celularInput?.value.trim() || "";
 
 
-
             const comentarios =
                 comentariosInput?.value.trim() || "";
 
@@ -334,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             mensaje +=
-                "Quiero realizar un pedido.\n\n";
+                "Quiero comunicarme con ustedes.\n\n";
 
 
             mensaje +=
@@ -342,19 +295,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             mensaje +=
-                `Celular / WhatsApp: ${celular}\n\n`;
+                `Celular / WhatsApp: ${celular}\n`;
 
 
-
-
+            /* ---------------------------------
+               COMENTARIOS
+            --------------------------------- */
 
             if (comentarios) {
 
                 mensaje +=
-                    `\nComentarios:\n${comentarios}\n`;
+                    `\nMensaje:\n${comentarios}\n`;
 
             }
 
+
+            /* ---------------------------------
+               TÉRMINOS
+            --------------------------------- */
 
             mensaje +=
                 "\nAcepto los términos y condiciones y la política de privacidad.";
@@ -379,7 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
             --------------------------------- */
 
             console.log(
-                "Pedido preparado:"
+                "Mensaje preparado:"
             );
 
 
